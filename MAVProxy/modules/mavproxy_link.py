@@ -567,6 +567,7 @@ class LinkModule(mp_module.MPModule):
     def colors_for_severity(self, severity):
         severity_colors = {
             # tuple is (fg, bg) (as in "white on red")
+            mavutil.mavlink.MAV_SEVERITY_ENUM_END: ('black', 'yellow'), # our permanent msgs use this channel
             mavutil.mavlink.MAV_SEVERITY_EMERGENCY: ('white', 'red'),
             mavutil.mavlink.MAV_SEVERITY_ALERT: ('white', 'red'),
             mavutil.mavlink.MAV_SEVERITY_CRITICAL: ('white', 'red'),
